@@ -1,0 +1,19 @@
+
+.celcius {
+  width: 500px;
+  height: 500px;
+  margin: 0px 10px 10px 10px;
+  float: left;
+}
+
+.fahrenheit {
+  width: 500px;
+  height: 500px;
+  margin: 0px 10px 10px 10px;
+  float: left;
+}
+
+
+#output{
+	float: left;
+}

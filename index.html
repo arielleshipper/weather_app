@@ -12,7 +12,57 @@
 
 <body>
 
+<h1>WEATHER APP!</h1>
 
+	<div class="celcius">
+
+		<h2>Enter Celcius</h2>
+
+		<input id="input-field" type="number">
+
+		<br>
+
+		<button>Convert</button>
+	</div>
+
+	<div class="fahrenheit">
+
+		<h2>Fahrenheit</h2>
+		<p id="output"></p>
+
+
+<script>
+	var celcius;
+	var fahrenheit;
+
+	function submit(){
+		// get user input
+		celcius = $('#input-field').val();
+		
+		// convert to fahrenheit
+		fahrenheit = celcius * (9/5) + 32;
+		$('#output').html(fahrenheit);
+
+		//compare fahrenheit value to figure out the change
+		if(fahrenheit < 10){
+			$('body').css('background-color', 'white');
+		} else if (fahrenheit >= 10 && fahrenheit < 30) {
+			$('body').css('background-color', '#d6fffb');
+		} else if (fahrenheit >= 30 && fahrenheit < 60) {
+			$('body').css('background-color', 'blue');
+		} else if (fahrenheit >= 60 && fahrenheit < 85) {
+			$('body').css('background-color', 'green');	
+		} else if (fahrenheit >= 85) {
+			$('body').css('background-color', 'red');
+		}
+	}
+
+
+	$('button').on('click', submit);
+//on submit, convert user_submitted_value to fahrenheit, display result in #output, compare the result to (the values on the board), so that you can change the background color of the page
+
+
+</script>
 
 </body>
 
